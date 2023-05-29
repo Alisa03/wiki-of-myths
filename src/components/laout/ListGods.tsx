@@ -14,7 +14,7 @@ const ListGods = ({ data }: any) => {
         <>
             <Block>
                 {data?.slice(0, visible).map((god: any) =>
-                    <LinkBlock key={god.id} to={`/wiki-of-myths/mythology/${id}/${god.id}`} item={god} />)
+                    <LinkBlock key={god.id} to={`/wiki-of-myths/mythology/${id}/${god.id}`} name={god.name} img={`..${god.img}`} />)
                 }
             </Block>
             <Block style={{ margin: "20px 0" }}>

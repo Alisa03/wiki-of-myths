@@ -51,9 +51,6 @@ export const Text = styled.p`
     text-align: ${({ center }: any) => center ? "center" : "justify"};
 
     @media ${baseTheme.media.table} {
-        font-size: 1.7rem
-    }
-    @media ${baseTheme.media.phone} {
         font-size: 1.3rem
     }
 `
@@ -89,6 +86,10 @@ export const Title1 = styled.h1`
         font-size: 4.5rem;
         letter-spacing: 0.01rem;
     }
+
+    @media (max-width: 450px) {
+        font-size: 3rem
+    }
 `
 export const Title2 = styled.h2`
     font: 400 4.8rem/1 ${baseTheme.fonts.title};
@@ -97,6 +98,10 @@ export const Title2 = styled.h2`
 
     @media ${baseTheme.media.phone} {
         font-size: 2.8rem;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 2.5rem
     }
 `
 export const Title3 = styled.h3`
@@ -112,8 +117,12 @@ export const Title3 = styled.h3`
 export const Title5 = styled.h5`
     margin: 10px 0;
 
-    font: 400 2.5rem/1 ${baseTheme.fonts.title};
+    font: 400 2.2rem/1 ${baseTheme.fonts.title};
     color: ${baseTheme.color.textColor};
+
+    @media (max-width: 450px) {
+        font-size: 2rem
+    }
 `
 
 export const Block = styled.div`

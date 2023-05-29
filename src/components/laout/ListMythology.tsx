@@ -11,7 +11,7 @@ const ListMythology = ({ list }: any) => {
         <>
             <Block>
                 {
-                    list.map((item: any) => <LinkBlock key={item.id} to={`/wiki-of-myths/mythology/${item.id}`} item={item}>{item.name}</LinkBlock>)
+                    list.map((item: any) => <LinkBlock key={item.id} to={`/wiki-of-myths/mythology/${item.id}`} name={item.name} img={item.img} />)
                 }
             </Block>
             <Block>

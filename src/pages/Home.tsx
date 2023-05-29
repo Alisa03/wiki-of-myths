@@ -18,7 +18,7 @@ const Home = () => {
                 <Background fon={Fon} title="Сборник мифов&nbsp;" subtitle="и легенд" />
                 <Container>
                     <Title3>О нас</Title3>
-                    <Text style={{ width: "60%", margin: "0 auto", textAlign: "center" }}>
+                    <Text style={{ width: "75%", margin: "0 auto", textAlign: "center" }}>
                         Маленький проект, где собраны мифы разных стран.
                     </Text>
                 </Container>

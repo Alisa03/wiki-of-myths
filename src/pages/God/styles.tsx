@@ -33,7 +33,12 @@ export const TextData = styled.p`
     font-family: "Ubuntu";
 
     @media ${baseTheme.media.table} {
-        font-size: 1.7rem
+        font-size: 1.3rem
     }
 `
 
+export const Block = styled.div`
+    @media ${baseTheme.media.phone} {
+        padding: 0 10px
+    }
+`

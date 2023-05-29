@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import json from '../../server/db.json'
@@ -12,6 +12,10 @@ import Loading from "../components/ui/Loading";
 const Mythology = () => {
     const { id } = useParams<any>();
     const mythology: any = json.mythology.find((i: any) => i.id === id)
+
+    useEffect(() => {
+        window.scrollTo({ top: 0 });
+    }, [])
 
     return (
         <Suspense fallback={<Loading />}>
