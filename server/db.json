@@ -14,7 +14,7 @@
                 },
                 {
                     "id": 2,
-                    "img": "../Greece/Legends/legends1.webp",
+                    "img": "../Greece/legends1.webp",
                     "title": "Оскопление Хроноса",
                     "body": "Своих страшных детей, киклопов и гекатонхейров, отец Уран запер в недрах Земли. Это не понравилось /wiki-of-myths/mythology/Greece/Gaia {Гейе}, самой Земле. мучимая болью пошла к детям своим, умолять их пойти против отца своего. Согласился только один - Крон. \nСпрятав его в укромном месте, Гея дала ему серп ост­ро­зу­бый и вся­ким ковар­ствам его обу­чи­ла. С Ночью Уран пришел, желая разделить ложе с женою. Но тут из засады выпрыгивает сын и отре­зает детородный орган. Из члена кровь полилась на Землю, что через года породила на свет богинь Эриний, гигантов с длинными копьями в руках и в блестящих доспехах и нимф Мелией. \nЧлен детородный же отсеченный по морю долго дрейфовал. Пена морская взбилась вокруг, и из нее девушка зародилась. Сначала подплыла к Киферам, после пристала к Кипру, где вышла на сушу. Богиню называли Афродитой. После предательства сыну Небо-Уран предрек ему судьбу, что досталась ему."
                 },
@@ -28,7 +28,7 @@
                 {
                     "id": "Chaos",
                     "name": "Хаос",
-                    "img": "/Greece/gods/Chaos.webp",
+                    "img": "/Greece/Chaos.webp",
                     "otherName": "χάος",
                     "type": "Первичное состояние мира",
                     "children": " /wiki-of-myths/mythology/Greece/Gaia {Гея}, /wiki-of-myths/mythology/Greece/Tartarus {Тартар}, /wiki-of-myths/mythology/Greece/Eros {Эрос}, /wiki-of-myths/mythology/Greece/Night {Ночь}, /wiki-of-myths/mythology/Greece/Erebus {Эреб}",
@@ -37,7 +37,7 @@
                 {
                     "id": "Gaia",
                     "name": "Гея",
-                    "img": "/Greece/gods/Gaia.webp",
+                    "img": "/Greece/Gaia.webp",
                     "otherName": "Γαῖα",
                     "managed": "Земля",
                     "spouse": "Уран, /wiki-of-myths/mythology/Greece/Tartarus {Тартар}",
@@ -49,7 +49,7 @@
                 {
                     "id": "Tartarus",
                     "name": "Тартар",
-                    "img": "/Greece/gods/Tartarus.webp",
+                    "img": "/Greece/Tartarus.webp",
                     "otherName": "Τάρταρος",
                     "managed": "Подземные глубины",
                     "type": "Изначальное божество",
@@ -61,7 +61,7 @@
                 {
                     "id": "Eros",
                     "name": "Эрос",
-                    "img": "/Greece/gods/Eros.webp",
+                    "img": "/Greece/Eros.webp",
                     "otherName": "Ἔρως",
                     "managed": "Любовь",
                     "type": "Изначальное божество",
@@ -71,7 +71,7 @@
                 {
                     "id": "Erebus",
                     "name": "Эреб",
-                    "img": "/Greece/gods/Erebus.webp",
+                    "img": "/Greece/Erebus.webp",
                     "otherName": "Ἔρεβος",
                     "managed": "Тьма",
                     "type": "Изначальное божество",
@@ -83,7 +83,7 @@
                 {
                     "id": "Night",
                     "name": "Ночь",
-                    "img": "/Greece/gods/Night.webp",
+                    "img": "/Greece/Night.webp",
                     "otherName": "Νύξ",
                     "managed": "Темная ночь",
                     "type": "Изначальное божество",
