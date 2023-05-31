@@ -1,6 +1,6 @@
 export const baseTheme = {
     fonts: {
-        text: 'Roboto Slab',
+        text: 'Inter',
         title: 'Cormorant Infant'
     },
     media: {

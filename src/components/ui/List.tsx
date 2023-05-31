@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom"
 
-import { InfoText, Info } from "../../assets/styles/styledComponents"
-import { TextData } from "../../pages/God/styles"
+import { InfoText, Info, Text } from "../../assets/styles/styledComponents"
 import LinksText from "./LinksText"
 
 
@@ -17,7 +16,7 @@ const List = ({ data, text }: any) => {
 
                 <Info>
                     <InfoText>{text}: </InfoText>
-                    <TextData><LinksText text={data} /></TextData>
+                    <Text><LinksText text={data} /></Text>
                 </Info>
             }
         </>

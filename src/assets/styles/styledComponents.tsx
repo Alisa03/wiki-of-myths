@@ -17,7 +17,7 @@ export const AppContainer = styled.div`
 `
 
 export const Container = styled.div`
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     padding: 60px 0;
 
@@ -25,7 +25,7 @@ export const Container = styled.div`
         width: 95%
     }
     @media ${baseTheme.media.phone} {
-        width: 99%
+        width: 96%
     }
 `
 
@@ -73,7 +73,6 @@ export const TextLink = styled(Link)`
 export const TextLinks = styled(Link)`
     text-decoration: underline;
     color: #ffece9;
-    margin: 0 5px;
 `
 
 // стили заголвков

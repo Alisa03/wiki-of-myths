@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { Text } from "../../assets/styles/styledComponents";
 
 import { baseTheme } from "../../assets/styles/theme";
 
 export const Img = styled.img`
     border: 4px solid ${baseTheme.color.blockColor};
-    border-radius: 48px;
+    border-radius: 30px;
     width: 40%; 
     max-height: 500px;
     margin: 10px 0;
@@ -28,17 +29,3 @@ export const Wr = styled.div`
     }
 `
 
-export const TextData = styled.p`
-    margin: 0 5px;
-    font-family: "Ubuntu";
-
-    @media ${baseTheme.media.table} {
-        font-size: 1.3rem
-    }
-`
-
-export const Block = styled.div`
-    @media ${baseTheme.media.phone} {
-        padding: 0 10px
-    }
-`

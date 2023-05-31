@@ -9,5 +9,5 @@ export const FonBlock = styled.div<{ fon: string }>`
     flex-direction: column;
     justify-content: center;
 
-    height: 100vh;
+    height: 90vh;
 `

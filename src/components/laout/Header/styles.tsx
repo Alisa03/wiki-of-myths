@@ -5,16 +5,13 @@ import { baseTheme } from "../../../assets/styles/theme";
 
 const StyledText = css`
     color: ${baseTheme.color.textColor};
-    font: 500 1.3rem/1 'Roboto Slab';
+    font: 500 1.3rem/1 ${baseTheme.fonts.text};
     text-transform: uppercase;
 `
 
 export const HeaderContainer = styled.header`
-    position: fixed;
+    position: absolute;
     z-index: 10;
-
-    display: flex;
-    justify-content: center;
 
     background: rgba(0, 0, 0, 0.7);
 
@@ -50,7 +47,10 @@ export const HeaderLink = styled(Link)`
 
 export const Nav = styled.nav`
     display: flex;
-    gap: 15px
+    gap: 15px;
+
+    width: 80%;
+    margin: 0 auto
 `
 
 export const Dropdown = styled.div`
@@ -62,15 +62,19 @@ export const Dropdown = styled.div`
 
         display: none;
 
-        background: black;
+        background: ${baseTheme.color.blockColor};
         border-radius: 18px;
 
         padding: 25px;
         
         li {
+            white-space: nowrap;
             margin-bottom: 10px;
             padding: 10px 0;
 
+            @media ${baseTheme.media.table} {
+                white-space: inherit;
+            }
         }
     }
 
@@ -78,4 +82,3 @@ export const Dropdown = styled.div`
         display: block
     }
 `
-

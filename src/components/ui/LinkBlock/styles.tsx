@@ -6,14 +6,14 @@ import { baseTheme } from "../../../assets/styles/theme";
 export const Wrap = styled.div`
     width: 230px;
     background: #1E1E1E;
-    border-radius: 189px 189px 48px 48px;
+    border-radius: 30px;
     padding: 5px;
     overflow: hidden;
 
     img {
         width: 100%;
         height: 230px;
-        border-radius: 189px 189px 10px 10px;
+        border-radius: 30px 30px 10px 10px;
         transition: all 0.2s linear;
     }
 

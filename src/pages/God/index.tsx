@@ -1,11 +1,11 @@
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useLayoutEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import json from '../../../server/db.json'
 
 
 import { Container, InfoText, Text, Title1, Title5, Wrap, Info } from "../../assets/styles/styledComponents";
-import { Img, TextData, Wr, Block } from "./styles";
+import { Img, Wr } from "./styles";
 
 import Loading from "../../components/ui/Loading";
 import LinksText from "../../components/ui/LinksText";
@@ -18,42 +18,44 @@ const God = () => {
     const [mythology, setMythology] = useState<any>(json.mythology.find((i: any) => i.id === id))
     const god = mythology.gods.find((i: any) => i.id === godsId)
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         window.scrollTo({ top: 0 });
     }, [])
 
     return (
         <Suspense fallback={<Loading />}>
-            {god &&
-                <Container>
-                    <Title1>{god.name}</Title1>
-                    <Wr>
-                        <Img src={`/wiki-of-myths${god.img}`} alt={`${god.id}`} />
-                        <Wrap style={{ alignItems: "flex-start" }}>
-                            <Info>
-                                <Text>Греческое написание:</Text>
-                                <TextData>{god.otherName}</TextData>
-                            </Info>
-                            {god.managed &&
+            <Container>
+                {god &&
+                    <Container>
+                        <Title1>{god.name}</Title1>
+                        <Wr>
+                            <Img src={`/wiki-of-myths${god.img}`} alt={`${god.id}`} />
+                            <Wrap style={{ alignItems: "flex-start" }}>
                                 <Info>
-                                    <Text>Является:</Text>
-                                    <TextData>{god.managed}</TextData>
+                                    <Text>Другое написание:</Text>
+                                    <Text style={{ fontFamily: "Ubuntu" }}>{god.otherName}</Text>
                                 </Info>
-                            }
+                                {god.managed &&
+                                    <Info>
+                                        <Text>Является:</Text>
+                                        <Text>{god.managed}</Text>
+                                    </Info>
+                                }
 
-                            <Text>{god.type}</Text>
-                            <List data={god.parents} text="Родители" />
-                            <List data={god.children} text="Дети" />
-                            <List data={god.spouse} text="Партнер" />
-                        </Wrap>
+                                <Text>{god.type}</Text>
+                                <List data={god.parents} text="Родители" />
+                                <List data={god.children} text="Дети" />
+                                <List data={god.spouse} text="Партнер" />
+                            </Wrap>
 
-                    </Wr>
-                    <Block>
-                        <Title5>История:</Title5>
-                        {god && god.history.split('\n').map((i: any, index: any) => <InfoText key={index}><LinksText text={i} /></InfoText>)}
-                    </Block>
-                </Container>
-            }
+                        </Wr>
+                        <>
+                            <Title5>История:</Title5>
+                            {god && god.history.split('\n').map((i: any, index: any) => <InfoText key={index}><LinksText text={i} /></InfoText>)}
+                        </>
+                    </Container>
+                }
+            </Container>
         </Suspense >
     )
 }

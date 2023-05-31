@@ -1,11 +1,14 @@
-import { Title1, Title2 } from "../../../assets/styles/styledComponents"
+import { Container, Title1, Title2 } from "../../../assets/styles/styledComponents"
+import Loading from "../Loading"
 import { FonBlock } from "./styles"
 
 const Background = (props: any) => {
     return (
         <FonBlock {...props}>
-            <Title1>{props.title}</Title1>
-            <Title2>{props.subtitle}</Title2>
+            <Container>
+                <Title1>{props.title}</Title1>
+                <Title2>{props.subtitle}</Title2>
+            </Container>
         </FonBlock>
     )
 }
