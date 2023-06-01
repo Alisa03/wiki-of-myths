@@ -26,6 +26,7 @@ export const Container = styled.div`
     }
     @media ${baseTheme.media.phone} {
         width: 96%
+        padding: 30px 0
     }
 `
 

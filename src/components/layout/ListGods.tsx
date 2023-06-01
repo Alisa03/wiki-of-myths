@@ -1,10 +1,12 @@
 import { useParams } from "react-router-dom";
 
 import useVisible from "../../hooks/useVisible";
+import { MYTHOLOGY_ROUTE } from "../../utils/consts";
 
-import { Button, Block, Title3, Container } from "../../assets/styles/styledComponents";
+import { Block, Title3, Container } from "../../assets/styles/styledComponents";
 
 import LinkBlock from "../ui/LinkBlock"
+import VisibleButton from "../ui/VisibleButton";
 
 const ListGods = ({ data }: any) => {
     const { id } = useParams();
@@ -17,12 +19,13 @@ const ListGods = ({ data }: any) => {
                 <Container>
                     <Title3>Боги</Title3>
                     <Block>
-                        {data?.slice(0, visible).map((god: any) =>
-                            <LinkBlock key={god.id} to={`/wiki-of-myths/mythology/${id}/${god.id}`} name={god.name} img={`..${god.img}`} />)
+                        {
+                            data?.slice(0, visible).map((god: any) =>
+                                <LinkBlock key={god.id} to={`${MYTHOLOGY_ROUTE}${id}/${god.id}`} name={god.name} img={`..${god.img}`} />)
                         }
                     </Block>
                     <Block style={{ margin: "20px 0" }}>
-                        {data && (data.length > visible) && <Button onClick={showMore}>Показать еще</Button>}
+                        <VisibleButton list={data} visible={visible} showMore={showMore} />
                     </Block>
                 </Container>
             }

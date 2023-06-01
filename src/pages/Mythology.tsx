@@ -1,19 +1,19 @@
-import { Suspense, useEffect } from "react";
+import { Suspense, useLayoutEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import json from '../../server/db.json'
 
-import ListGods from "../components/laout/ListGods";
+import ListGods from "../components/layout/ListGods";
 
-import Legends from "../components/laout/ListLegend";
 import Background from "../components/ui/Background";
+import Legends from "../components/layout/ListLegend";
 import Loading from "../components/ui/Loading";
 
 const Mythology = () => {
-    const { id } = useParams<any>();
+    const { id } = useParams();
     const mythology: any = json.mythology.find((i: any) => i.id === id)
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         window.scrollTo({ top: 0 });
     }, [])
 
@@ -22,7 +22,7 @@ const Mythology = () => {
 
             <>
                 <Background fon={mythology.fon} title={mythology.name} subtitle={mythology.subtitle} />
-                <Legends list={mythology.legends} />
+                <Legends data={mythology.legends} />
                 <ListGods data={mythology.gods} />
             </>
         </Suspense>

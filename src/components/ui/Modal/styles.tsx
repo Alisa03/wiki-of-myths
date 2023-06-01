@@ -68,8 +68,11 @@ export const ModalBox = styled.div`
 
 export const Close = styled.button`
     position: fixed; 
+    top: 3vw;
+    right: 3vw;
 
     cursor: pointer; 
+
 
     width: 30px;
     height: 30px;

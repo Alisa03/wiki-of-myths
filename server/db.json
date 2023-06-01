@@ -4,7 +4,7 @@
             "id": "Greece",
             "name": "Греческая мифология",
             "img": "Greece/Greece.webp",
-            "fon": "../Greece/GreeceFon.webp",
+            "fon": "Greece/GreeceFon.webp",
             "subtitle": "Мифология написана по теогонии Гесиода",
             "legends": [
                 {
@@ -99,7 +99,7 @@
             "name": "Скандинавская мифология",
             "id": "Scandinavia",
             "img": "Scandinavia/Scandinavia.webp",
-            "fon": "../Scandinavia/ScandinaviaFon.webp",
+            "fon": "Scandinavia/ScandinaviaFon.webp",
             "subtitle": "мифология написана на основе старшей Эдды и младшей",
             "legends": [
                 {

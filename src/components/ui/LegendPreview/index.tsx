@@ -1,31 +1,29 @@
-import React, { useState } from "react"
+import { useState } from "react"
 
-import { InfoText, Title3, Title5 } from "../../../assets/styles/styledComponents"
+import { Title3, Title5 } from "../../../assets/styles/styledComponents"
 import { Wrap } from "./styles"
 
+import Desc from "../Desc"
 import Modal from "../Modal"
-import LinksText from "../LinksText"
 
 const LegendPreview = ({ legend }: any) => {
     const [open, setOpen] = useState(false)
 
+    const OpenModal = () => {
+        const op = open ? 'unset' : 'hidden'
+        document.body.style.overflow = op
+        setOpen(!open)
+    }
+
     return (
         <>
-            <Wrap onClick={() => {
-                document.body.style.overflow = 'hidden';
-                setOpen(!open)
-            }
-            }>
+            <Wrap onClick={() => OpenModal()}>
                 <Title5>{legend.title}</Title5>
-                {legend && legend.body.slice(0, 200).split('\n').map((i: any, index: any) => <InfoText key={index}><LinksText text={i} /> ...</InfoText>)}
+                <Desc data={legend} text={legend.body.slice(0, 200)} />
             </Wrap>
-            <Modal isOpen={open} toggle={() => {
-                document.body.style.overflow = 'unset';
-                setOpen(!open)
-            }
-            }>
+            <Modal isOpen={open} toggle={() => OpenModal()}>
                 <Title3>{legend.title}</Title3>
-                {legend && legend.body.split('\n').map((i: any, index: any) => <InfoText key={index}><LinksText text={i} /></InfoText>)}
+                <Desc data={legend} text={legend.body} />
                 {
                     legend.img &&
                     <img src={`${legend.img}`} />

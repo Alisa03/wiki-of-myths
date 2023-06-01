@@ -14,10 +14,10 @@ export const HeaderContainer = styled.header`
     z-index: 10;
 
     background: rgba(0, 0, 0, 0.7);
+    background-clip: text;
 
     width: 100%;
     padding: 15px 0;
-    background-clip: text;
 `
 
 export const HeaderLink = styled(Link)`
@@ -43,6 +43,10 @@ export const HeaderLink = styled(Link)`
     :hover:after {
         width: 100%
     }
+
+    @media ${baseTheme.media.phone} {
+        font-size: 1rem
+    }
 `
 
 export const Nav = styled.nav`
@@ -55,10 +59,16 @@ export const Nav = styled.nav`
 
 export const Dropdown = styled.div`
         position: relative;
+        
         ${StyledText};
 
-    ul {
-        position: absolute;
+    :hover ul {
+        display: block
+    }
+`
+
+export const DropdownList = styled.ul`
+    position: absolute;
 
         display: none;
 
@@ -66,19 +76,18 @@ export const Dropdown = styled.div`
         border-radius: 18px;
 
         padding: 25px;
-        
-        li {
-            white-space: nowrap;
-            margin-bottom: 10px;
-            padding: 10px 0;
 
-            @media ${baseTheme.media.table} {
-                white-space: inherit;
-            }
+        @media ${baseTheme.media.phone} {
+            padding: 15px
         }
-    }
+`
 
-    :hover ul {
-        display: block
+export const DropdownItem = styled.li`
+    white-space: nowrap;
+    margin-bottom: 10px;
+    padding: 10px 0;
+
+    @media ${baseTheme.media.table} {
+        white-space: inherit;
     }
 `

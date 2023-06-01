@@ -1,7 +1,6 @@
-import { useParams, useRouteError } from "react-router-dom";
 import { Main } from "../components/ui/Loading/styles"
 
-const NotFound = (data: any) => {
+const NotFound = () => {
     return (
         <Main>
             <h1 style={{ fontSize: "50vw" }}>404</h1>

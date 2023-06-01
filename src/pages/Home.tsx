@@ -6,7 +6,7 @@ import { Container, Text, Title3 } from "../assets/styles/styledComponents";
 
 import Background from "../components/ui/Background";
 import Fon from "../assets/img/fon.jpg"
-import ListMythology from "../components/laout/ListMythology";
+import ListMythology from "../components/layout/ListMythology";
 import Loading from "../components/ui/Loading";
 
 const Home = () => {
@@ -24,7 +24,7 @@ const Home = () => {
                 </Container>
                 <Container>
                     <Title3>Мифологии</Title3>
-                    <ListMythology list={mythologys} />
+                    <ListMythology data={mythologys} />
                 </Container>
             </div >
         </Suspense>

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Text } from "../../assets/styles/styledComponents";
 
 import { baseTheme } from "../../assets/styles/theme";
 

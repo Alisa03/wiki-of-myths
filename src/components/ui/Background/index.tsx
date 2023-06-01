@@ -1,5 +1,5 @@
 import { Container, Title1, Title2 } from "../../../assets/styles/styledComponents"
-import Loading from "../Loading"
+
 import { FonBlock } from "./styles"
 
 const Background = (props: any) => {
