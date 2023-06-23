@@ -56,8 +56,8 @@ export const Text = styled.p`
     }
 `
 
-export const InfoText = styled(Text)`
-    margin: 5px 0;
+export const ListText = styled(Text)`
+    margin-left: 10px;
 `
 
 export const TextLink = styled(Link)`
@@ -147,4 +147,9 @@ export const Info = styled.div`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    gap: 0 10px
+`
+
+export const InfoFamily = styled(Info)`
+    gap: 0;
 `

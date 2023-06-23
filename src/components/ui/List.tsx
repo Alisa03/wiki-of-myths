@@ -1,4 +1,4 @@
-import { InfoText, Info, Text } from "../../assets/styles/styledComponents"
+import { ListText, Info, Text, InfoFamily } from "../../assets/styles/styledComponents"
 import LinksText from "./LinksText"
 
 const List = ({ data, text }: any) => {
@@ -6,10 +6,10 @@ const List = ({ data, text }: any) => {
         <>
             {
                 data &&
-                <Info>
-                    <InfoText>{text}: </InfoText>
-                    <Text><LinksText text={data} /></Text>
-                </Info>
+                <InfoFamily>
+                    <Text>{text}: </Text>
+                    <ListText><LinksText text={data} /></ListText>
+                </InfoFamily>
             }
         </>
     )
