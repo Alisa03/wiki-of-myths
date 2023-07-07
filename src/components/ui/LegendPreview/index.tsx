@@ -5,6 +5,7 @@ import { Wrap } from "./styles"
 
 import Desc from "../Desc"
 import Modal from "../Modal"
+import ProviewText from './ProviewText'
 
 const LegendPreview = ({ legend }: any) => {
     const [open, setOpen] = useState(false)
@@ -17,10 +18,12 @@ const LegendPreview = ({ legend }: any) => {
 
     return (
         <>
+
             <Wrap onClick={() => OpenModal()}>
                 <Title5>{legend.title}</Title5>
-                <Desc data={legend} text={legend.body.slice(0, 200)} />
+                <ProviewText text={legend.body.slice(0, 200)} />
             </Wrap>
+
             <Modal isOpen={open} toggle={() => OpenModal()}>
                 <Title3>{legend.title}</Title3>
                 <Desc data={legend} text={legend.body} />
@@ -29,6 +32,7 @@ const LegendPreview = ({ legend }: any) => {
                     <img src={`${legend.img}`} />
                 }
             </Modal>
+
         </>
     )
 }

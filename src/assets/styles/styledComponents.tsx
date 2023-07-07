@@ -17,32 +17,31 @@ export const AppContainer = styled.div`
 `
 
 export const Container = styled.div`
-    width: 85%;
+    width: 60%;
     margin: 0 auto;
-    padding: 60px 0;
 
-    @media ${baseTheme.media.table} {
-        width: 95%
-    }
-    @media ${baseTheme.media.phone} {
-        width: 96%
-        padding: 30px 0
-    }
+    @media (max-width: 1100px) {width: 70%}
+
+    @media ${baseTheme.media.table} {width: 85%}
+
+    @media ${baseTheme.media.phone} {width: 96%}
 `
 
 export const Button = styled.button`
-    background: ${baseTheme.color.textColor};
+    background: #3d2f2c;
     border-radius: 15px;
     cursor: pointer;
+    width: 230px;
+    color: white;
 
     padding: 5px 10px;
 
     font: 400 1.5rem/1.2 ${baseTheme.fonts.text};
 
-    transition: background ease .7s;
+    transition: all ease .7s;
 
     :hover {
-        background: rgb(146 106 97) 
+        background: rgb(146 106 97);
     }
 `
 
@@ -56,9 +55,7 @@ export const Text = styled.p`
     }
 `
 
-export const ListText = styled(Text)`
-    margin-left: 10px;
-`
+export const ListText = styled(Text)`margin-left: 10px`
 
 export const TextLink = styled(Link)`
     margin: 0 5px;
@@ -66,9 +63,7 @@ export const TextLink = styled(Link)`
     ${fontStyles};
     font-family: "Ubuntu";
 
-    @media ${baseTheme.media.table} {
-        font-size: 1.7rem
-    }
+    @media ${baseTheme.media.table} {font-size: 1.7rem}
 `
 
 export const TextLinks = styled(Link)`
@@ -87,22 +82,16 @@ export const Title1 = styled.h1`
         letter-spacing: 0.01rem;
     }
 
-    @media (max-width: 450px) {
-        font-size: 3rem
-    }
+    @media (max-width: 450px) {font-size: 3rem}
 `
 export const Title2 = styled.h2`
     font: 400 4.8rem/1 ${baseTheme.fonts.title};
     letter-spacing: 0.25rem;
     text-align: center;
 
-    @media ${baseTheme.media.phone} {
-        font-size: 2.8rem;
-    }
+    @media ${baseTheme.media.phone} {font-size: 2.8rem}
 
-    @media (max-width: 450px) {
-        font-size: 2.5rem
-    }
+    @media (max-width: 450px) {font-size: 2.5rem}
 `
 export const Title3 = styled.h3`
     margin: 20px 0;
@@ -110,19 +99,15 @@ export const Title3 = styled.h3`
     font: 400 3.5rem/1 ${baseTheme.fonts.title};
     text-align: center;
 
-    @media ${baseTheme.media.table} {
-        font-size: 3.5rem
-    }
+    @media ${baseTheme.media.table} {font-size: 3.5rem}
 `
 export const Title5 = styled.h5`
     margin: 10px 0;
 
-    font: 400 2.2rem/1 ${baseTheme.fonts.title};
+    font: 400 2rem/1 ${baseTheme.fonts.title};
     color: ${baseTheme.color.textColor};
 
-    @media (max-width: 450px) {
-        font-size: 2rem
-    }
+    @media (max-width: 450px) {font-size: 2rem}
 `
 
 export const Block = styled.div`
@@ -130,17 +115,15 @@ export const Block = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    
-    @media ${baseTheme.media.phone} {
-        gap: 30px 0;
-    }
 `
 
 export const Wrap = styled(Container)`
     display: flex; 
     align-items: center; 
     flex-direction: column; 
-    gap: 10px 0
+    gap: 20px 0;
+
+    margin: 60px auto
 `
 
 export const Info = styled.div`

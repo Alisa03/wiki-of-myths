@@ -13,7 +13,7 @@ const Legends = ({ data }: any) => {
             {
                 data &&
                 <Wrap>
-                    <Title3>Легенды</Title3>
+                    <Title3>Мифы</Title3>
                     {
                         data.slice(0, visible).map((item: any) =>
                             <LegendsPreview key={item.id} legend={item} />

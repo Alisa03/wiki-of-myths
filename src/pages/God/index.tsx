@@ -23,7 +23,7 @@ const God = () => {
 
     return (
         <Suspense fallback={<Loading />}>
-            <Container>
+            <Container style={{}}>
                 <Title1>{god.name}</Title1>
                 <Wr>
                     <Img src={`/wiki-of-myths${god.img}`} alt={`${god.id}`} />

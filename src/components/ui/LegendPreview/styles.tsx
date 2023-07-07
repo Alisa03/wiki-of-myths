@@ -8,10 +8,10 @@ export const Wrap = styled.div`
     color: ${baseTheme.color.textColor};
     cursor: pointer;
 
-    width: 70%;
+    width: 90%;
     padding: 30px;
 
     @media (${baseTheme.media.table}) {
-        width: 90%
+        width: 100%
     }
 `

@@ -19,7 +19,6 @@ const Mythology = () => {
 
     return (
         <Suspense fallback={<Loading />}>
-
             <>
                 <Background fon={mythology.fon} title={mythology.name} subtitle={mythology.subtitle} />
                 <Legends data={mythology.legends} />

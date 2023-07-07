@@ -4,8 +4,8 @@ export const baseTheme = {
         title: 'Cormorant Infant'
     },
     media: {
-        table: '(max-width: 770px)',
-        phone: '(max-width: 500px)'
+        table: '(max-width: 800px)',
+        phone: '(max-width: 550px)'
     },
     color: {
         textColor: '#E5C7C2',

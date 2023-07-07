@@ -40,13 +40,9 @@ export const HeaderLink = styled(Link)`
         transition: width 1s ease
     }
 
-    :hover:after {
-        width: 100%
-    }
+    :hover:after {width: 100%}
 
-    @media ${baseTheme.media.phone} {
-        font-size: 1rem
-    }
+    @media ${baseTheme.media.phone} {font-size: 1.5rem}
 `
 
 export const Nav = styled.nav`
@@ -58,28 +54,30 @@ export const Nav = styled.nav`
 `
 
 export const Dropdown = styled.div`
-        position: relative;
+    position: relative;
+    cursor: pointer; 
         
-        ${StyledText};
+    ${StyledText};
 
-    :hover ul {
-        display: block
-    }
+    :hover ul {display: block}
+
+    @media ${baseTheme.media.phone} {font-size: 1.5rem}
 `
 
 export const DropdownList = styled.ul`
     position: absolute;
 
-        display: none;
+    display: none;
 
-        background: ${baseTheme.color.blockColor};
-        border-radius: 18px;
+    background: ${baseTheme.color.blockColor};
+    border-radius: 18px;
 
-        padding: 25px;
+    padding: 25px;
 
-        @media ${baseTheme.media.phone} {
-            padding: 15px
-        }
+    @media ${baseTheme.media.phone} {
+        padding: 15px;
+        width: 50vw
+    }
 `
 
 export const DropdownItem = styled.li`
@@ -87,7 +85,5 @@ export const DropdownItem = styled.li`
     margin-bottom: 10px;
     padding: 10px 0;
 
-    @media ${baseTheme.media.table} {
-        white-space: inherit;
-    }
+    @media ${baseTheme.media.table} {white-space: inherit}
 `

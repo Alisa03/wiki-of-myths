@@ -35,12 +35,12 @@ export const ModalBox = styled.div`
     
     width: 50%;
     max-height: 85%;
-    padding: 1rem;
+    padding: .5rem;
 
     img {
         width: 100%;
         margin-top: 20px;
-        border-radius: 18px
+        border-radius: .5rem
     }
 
     ::-webkit-scrollbar {
