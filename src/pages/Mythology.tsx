@@ -20,7 +20,7 @@ const Mythology = () => {
     return (
         <Suspense fallback={<Loading />}>
             <>
-                <Background fon={mythology.fon} title={mythology.name} subtitle={mythology.subtitle} />
+                <Background fon={"/" + id + "/Fon.webp"} title={mythology.name} subtitle={mythology.subtitle} />
                 <Legends data={mythology.legends} />
                 <ListGods data={mythology.gods} />
             </>

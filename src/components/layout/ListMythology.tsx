@@ -14,7 +14,11 @@ const ListMythology = ({ data }: any) => {
             <Block>
                 {
                     data.map((item: any) =>
-                        <LinkBlock key={item.id} to={`${MYTHOLOGY_ROUTE}${item.id}`} name={item.name} img={item.img} />)
+                        <LinkBlock
+                            key={item.id} to={`${MYTHOLOGY_ROUTE}${item.id}`}
+                            name={item.name} img={"/" + item.id + "/img.webp"}
+                        />
+                    )
                 }
             </Block>
             <Block>

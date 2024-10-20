@@ -3,8 +3,6 @@
         {
             "id": "Greece",
             "name": "Греческая",
-            "img": "Greece/Greece.webp",
-            "fon": "Greece/GreeceFon.webp",
             "subtitle": "мифология написана по теогонии Гесиода",
             "legends": [
                 {
@@ -98,8 +96,6 @@
         {
             "name": "Скандинавская",
             "id": "Scandinavia",
-            "img": "Scandinavia/Scandinavia.webp",
-            "fon": "Scandinavia/ScandinaviaFon.webp",
             "subtitle": "мифология написана на основе старшей Эдды и младшей",
             "legends": [
                 {
