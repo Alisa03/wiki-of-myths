@@ -1,4 +1,4 @@
-import { ListText, Info, Text, InfoFamily } from "../../assets/styles/styledComponents"
+import { ListText, Text, InfoFamily } from "../../assets/styles/styledComponents"
 import LinksText from "./LinksText"
 
 const List = ({ data, text }: any) => {

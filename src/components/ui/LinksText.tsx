@@ -13,6 +13,8 @@ class LinksText extends React.Component<IProps> {
 
         this.props.text && this.props.text.replace(regex, (m, text, fr, names, link, rf): any => {
             res.push(link ? <TextLinks to={link} key={res.length}>{rf.replace(/([{}])/gim, '')}</TextLinks> : text)
+
+            return {m, fr, names}
         })
 
         return <>{res}</>
