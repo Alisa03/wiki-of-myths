@@ -11,6 +11,8 @@ class ProviewText extends React.Component<IProps> {
 
         this.props.text && this.props.text.replace(regex, (m, text, fr, names, link, rf): any => {
             res.push(rf ? <span key={res.length}>{rf.replace(/([{}])/gim, '')}</span> : text)
+
+            return {m, fr, names, link}
         })
 
         return <Text>{res}</Text>

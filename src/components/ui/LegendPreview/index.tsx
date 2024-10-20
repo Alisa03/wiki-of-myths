@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useParams } from "react-router-dom"
 
 import { Title3, Title5 } from "../../../assets/styles/styledComponents"
 import { Wrap } from "./styles"
@@ -9,6 +10,7 @@ import ProviewText from './ProviewText'
 
 const LegendPreview = ({ legend }: any) => {
     const [open, setOpen] = useState(false)
+    const { id } = useParams();
 
     const OpenModal = () => {
         const op = open ? 'unset' : 'hidden'
@@ -29,7 +31,7 @@ const LegendPreview = ({ legend }: any) => {
                 <Desc data={legend} text={legend.body} />
                 {
                     legend.img &&
-                    <img src={`${legend.img}`} />
+                    <img src={"/" + id + "/" + legend.img} />
                 }
             </Modal>
 

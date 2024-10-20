@@ -26,7 +26,7 @@ const God = () => {
             <Container style={{}}>
                 <Title1>{god.name}</Title1>
                 <Wr>
-                    <Img src={`/wiki-of-myths${god.img}`} alt={`${god.id}`} />
+                    <Img src={"/" + id + "/" + godsId + ".webp"} alt={`${god.id}`} />
                     <Wrap style={{ alignItems: "flex-start" }}>
                         <Info>
                             <Text>Другое написание:</Text>
