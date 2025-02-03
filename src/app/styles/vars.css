@@ -1,0 +1,12 @@
+:root {
+    --text-color: #FFFBFB;
+    --block-color: #272727;
+    --element-color: #C19543;
+    --element-color-active: #664a15;
+
+    --media-phone: 550px;
+    --media-table: 800px;
+
+    --font-text: 'Inter';
+    --font-title: 'Cormorant Infant'
+}

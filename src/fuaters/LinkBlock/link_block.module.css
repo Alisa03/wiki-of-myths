@@ -1,0 +1,42 @@
+.wrap {
+    width: 23vw;
+    height: 30vw;
+    border: 2px solid color-mix(in srgb, var(--element-color) 60%, transparent);
+    border-radius: 20px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s linear;
+}
+
+.img_block {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    height: 85%;
+    border-radius: 15px;
+}
+
+.wrap:hover .img {
+    transform: scale(1.05)
+}
+
+
+@media (max-width: var(--media-phone)) {
+    .wrap {
+        width: 70vw;
+        margin: 0 auto
+    }
+
+    .img, .img_block {height: 300px}
+}
