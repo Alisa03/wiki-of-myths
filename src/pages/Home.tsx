@@ -7,13 +7,13 @@ import { Background } from "~/modules";
 import { Container, H3 } from '~/app/styles/styledComponents';
 
 export const Home = () => {
-    const mythologys = json.mythology
+    const { mythology }: { mythology: { id: string; name: string; }[] } = JSON.parse(JSON.stringify(json))
 
     return <div>
         <Background fon="/Fon.webp" title="Сборник мифов&nbsp;" subtitle="и богов" />
         <Container>
             <H3>Мифологии</H3>
-            <Mythologys data={mythologys} />
+            <Mythologys data={mythology} />
         </Container>
     </div>
 }

@@ -5,21 +5,39 @@ import { Gods, Legends } from "~/screens";
 
 import { Background } from "~/modules";
 
+import { Loading } from "~/shared/ui";
+
 export const Mythology = () => {
     const { id } = useParams();
 
-    const [data, setdata] = useState()
+    const [data, setData] = useState<mythology>()
+    const [error, setError] = useState()
+    const [isLoading, setIsLoading] = useState(false)
 
     useLayoutEffect(() => {
         window.scrollTo({ top: 0 });
 
+        setIsLoading(true)
         fetch(`/server/${id}.json`)
-            .then((res) => console.log(JSON.stringify(res.body)))
-    }, [])
+            .then((response) => response.json())
+            .then((json: mythology) => {
+                setData(json)
+            })
+            .catch((er) => setError(er))
+            .finally(() => setIsLoading(false))
+    }, [id])
+
+    if (isLoading) return <Loading />
+    if (error) return <div className="container">Упс, что-то пошло не так</div>
 
     return <>
-        {/* <Background fon={"/" + id + "/Fon.webp"} title={mythology.name} subtitle={mythology.subtitle} />
-        <Legends data={mythology.legends} />
-        <Gods data={mythology.gods} /> */}
+        {
+            data
+            && <>
+                <Background fon={"/" + id + "/Fon.webp"} title={data.name} subtitle={data.subtitle} />
+                <Legends data={data.legends} />
+                <Gods data={data.gods} />
+            </>
+        }
     </>
 }

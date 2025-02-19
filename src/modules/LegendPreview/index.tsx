@@ -21,7 +21,6 @@ export const LegendPreview = ({ legend }: any) => {
 
     return (
         <>
-
             <Wrap onClick={OpenModal}>
                 <H4>{legend.title}</H4>
                 <ProviewText text={legend.body.slice(0, 200)} />

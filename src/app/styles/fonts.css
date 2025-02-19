@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Cormorant Infant";
+  font-style: normal;
+  font-weight: 400;
+  src: url("public/fonts/Cormorant_Infant/CormorantInfant-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("public/fonts/Inter/static/Inter_24pt-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("public/fonts/Inter/static/Inter_24pt-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("public/fonts/Inter/static/Inter_24pt-SemiBold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("public/fonts/Inter/static/Inter_24pt-Bold.ttf") format("ttf");
+}

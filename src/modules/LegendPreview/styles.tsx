@@ -11,6 +11,12 @@ export const Wrap = styled.div`
     width: 90%;
     padding: 30px;
 
+    transition: var(--hover);
+
+    :hover {
+        background-color: var(--color-block-hover)
+    }
+
     @media (${baseTheme.media.table}) {
         width: 100%
     }

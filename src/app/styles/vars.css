@@ -1,12 +1,19 @@
 :root {
-    --text-color: #FFFBFB;
-    --block-color: #272727;
-    --element-color: #C19543;
-    --element-color-active: #664a15;
+    --color-text: #FFFBFB;
+    --color-block: #272727;
+    --color-element: #C19543;
+    --color-element-active: #664a15;
+
+    --background: #000;
+    --color-block-hover: rgb(37 35 32);
 
     --media-phone: 550px;
     --media-table: 800px;
 
     --font-text: 'Inter';
-    --font-title: 'Cormorant Infant'
+    --font-title: 'Cormorant Infant';
+
+    --animation-time: .7s;
+
+    --hover: all var(--animation-time) ease
 }

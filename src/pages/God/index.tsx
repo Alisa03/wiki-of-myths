@@ -1,58 +1,73 @@
 import { useParams } from "react-router-dom";
-
-import json from '../../../public/server/db.json'
+import { useEffect, useState } from "react";
 
 import { List } from "~/modules";
 
-import { Img, Wr } from "./styles";
-
 import { Desc } from "~/shared/ui";
 
-import { Container, H1, H4, Info, Text, Wrap } from "~/app/styles/styledComponents";
-import { useEffect } from "react";
+import { H1, H4, Info, Text } from "~/app/styles/styledComponents";
+
+import s from './god.module.css'
+import clsx from "clsx";
 
 export const God = () => {
     const { id } = useParams()
     const { godsId } = useParams();
 
-    const mythology: any = json.mythology.find((i: any) => i.id === id)
-    const god = mythology.gods.find((i: any) => i.id === godsId)
+    const [isError, setIsError] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
+    const [god, setGod] = useState<any>()
 
     useEffect(() => {
-        fetch(`/${id}`)
-            .then((response) => console.log(response))
+        fetch(`/server/${id}.json`)
+            .then((response) => {
+                setIsLoading(true)
+                return response.json()
+            })
+            .then((data: mythology) => {
+                const god = data.gods.find((i: any) => i.id === godsId)
+                setGod(god)
+            }
+            )
+            .catch(() => setIsError(true))
+            .finally(() => setIsLoading(false))
+    }, [godsId, id])
 
-    }, [godsId])
+    if (isLoading) return <p>Loading</p>
+    if (isError) return <p>Error</p>
 
-    return (
-        <Container style={{}}>
-            <H1>{god.name}</H1>
-            <Wr>
-                <Img src={"/" + id + "/" + godsId + ".webp"} alt={`${god.id}`} />
-                <Wrap style={{ alignItems: "flex-start" }}>
-                    <Info>
-                        <Text>Другое написание:</Text>
-                        <Text style={{ fontFamily: "Ubuntu" }}>{god.otherName}</Text>
-                    </Info>
-
-                    {
-                        god.managed &&
-                        <Info>
-                            <Text>Является:</Text>
-                            <Text>{god.managed}</Text>
-                        </Info>
-                    }
-
-                    <Text>{god.type}</Text>
-                    <List data={god.parents} text="Родители" />
-                    <List data={god.children} text="Дети" />
-                    <List data={god.spouse} text="Партнер" />
-                </Wrap>
-            </Wr>
-            <>
-                <H4>История:</H4>
-                <Desc data={god} text={god.history} />
-            </>
-        </Container>
-    )
+    return <>
+        {
+            god
+            && <div style={{ paddingTop: '5rem' }}>
+                <H1>{god?.name}</H1>
+                <div className={clsx(s.wrapper, 'container')}>
+                    <div className={s.wrap}>
+                        <img className={s.img} src={"/" + id + "/" + godsId + ".webp"} alt={`${godsId}`} />
+                        <div className={s.info}>
+                            <Info>
+                                <Text>Другое написание:</Text>
+                                <Text style={{ fontFamily: "Ubuntu" }}>{god.otherName}</Text>
+                            </Info>
+                            {
+                                god.managed &&
+                                <Info>
+                                    <Text>Является:</Text>
+                                    <Text>{god.managed}</Text>
+                                </Info>
+                            }
+                            <Text>{god.type}</Text>
+                            <List mythology={id} data={god.parents} text={god.parents > 1 ? "Родители" : "Родитель"} />
+                            <List mythology={id} data={god.children} text="Дети" />
+                            <List mythology={id} data={god.spouse} text="Партнер" />
+                        </div>
+                    </div>
+                    <div>
+                        <H4>История:</H4>
+                        <Desc data={god} text={god.history} />
+                    </div>
+                </div>
+            </div>
+        }
+    </>
 }

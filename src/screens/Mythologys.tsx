@@ -5,16 +5,16 @@ import { LinkBlock, VisibleButton } from "~/fuaters"
 import { useVisible } from "~/shared/hooks"
 import { MYTHOLOGY_ROUTE } from "~/shared/utils/consts"
 
-export const Mythologys = ({ data }: any) => {
+export const Mythologys = ({ data }: { data: { [key: string]: string }[] }) => {
     const { showMore, visible } = useVisible()
 
     return <>
         <Block>
             {
-                data.map((item: string) =>
+                data!.map(({ id, name }: { [key: string]: string }) =>
                     <LinkBlock
-                        key={item} to={`${MYTHOLOGY_ROUTE}${item}`}
-                        name={item} img={"/" + item + "/img.webp"}
+                        key={id} to={`${MYTHOLOGY_ROUTE}${id}`}
+                        name={name} img={"/" + id + "/img.webp"}
                     />
                 )
             }

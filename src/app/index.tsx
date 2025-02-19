@@ -1,10 +1,12 @@
 import { RouterProvider } from "react-router-dom"
 
-import { AppContainer } from "./app/styles/styledComponents"
+import { AppContainer } from "./styles/styledComponents"
 
-import './app/styles/reset.css'
-import { router } from "./app/AppRouter"
-import { Loading } from "./shared/ui"
+import './styles/reset.css'
+
+import { router } from "./AppRouter"
+
+import { Loading } from "~/shared/ui"
 
 function App() {
   return (

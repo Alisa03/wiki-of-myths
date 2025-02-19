@@ -29,7 +29,7 @@ export const ModalBox = styled.div`
     z-index: 50;
     display: block;
 
-    background: ${baseTheme.color.blockColor};
+    background: ;
     border-radius: 1rem;
     overflow: auto;
 
@@ -44,7 +44,7 @@ export const ModalBox = styled.div`
     }
 
     ::-webkit-scrollbar {
-        background: #00000000;
+        background: var(--background);
         width: 5px;
     }
 
@@ -72,7 +72,7 @@ export const Close = styled.button`
     height: 40px;
     opacity: 0.3;
     cursor: pointer;
-    transition: all .7s ease;
+    transition: var(--hover);
 
     :hover {opacity: 1}
     

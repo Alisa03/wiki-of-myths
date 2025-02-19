@@ -1,8 +1,10 @@
-import { createBrowserRouter } from "react-router-dom"
+import { createBrowserRouter, Navigate } from "react-router-dom"
+
+import { God, Home, Mythology } from "~/pages"
+
+import { Layout } from "~/screens/Layout";
 
 import * as Path from "~/shared/utils/consts"
-import * as Page from "~/pages"
-import { Layout } from "~/screens/Layout";
 
 import './styles/index.css'
 
@@ -14,19 +16,19 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                Component: Page.Home
+                Component: Home
             },
             {
                 path: Path.MYTHOLOGY_ROUTE + ":id",
-                Component: Page.Mythology,
+                element: <Mythology />,
             },
             {
                 path: Path.MYTHOLOGY_ROUTE + ":id/:godsId",
-                Component: Page.God,
+                Component: God,
             },
             {
                 path: '*',
-                Component: Page.NotFound
+                element: <Navigate to={Path.HOME_ROUTE} />
             },
         ],
     },

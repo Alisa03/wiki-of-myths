@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { baseTheme } from "./theme";
 
 const fontStyles = css`
-    font: 400 1.25rem/1.1 ${baseTheme.fonts.text};
+    font: 400 1rem/1.3 ${baseTheme.fonts.text};
 `
 
 export const AppContainer = styled.div`
@@ -30,10 +30,10 @@ export const Container = styled.div`
 // стили текста 
 export const Text = styled.p`
     ${fontStyles};
-    text-align: ${({ center }: any) => center ? "center" : "start" };
+    text-align: ${({ center }: { center?: boolean }) => center ? "center" : "start"};
 
     @media ${baseTheme.media.table} {
-        font-size: 1.3rem
+        font-size: 1.2rem
     }
 `
 
@@ -110,9 +110,12 @@ export const Wrap = styled(Container)`
 
 export const Info = styled.div`
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0 10px
+    gap: 0px 10px;
+    justify-content: space-between;
+}
 `
 
 export const InfoFamily = styled(Info)`

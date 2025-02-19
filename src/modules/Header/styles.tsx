@@ -69,7 +69,7 @@ export const DropdownList = styled.ul`
 
     display: none;
 
-    background: ${baseTheme.color.blockColor};
+    background: var(--background);
     border-radius: 18px;
 
     padding: 25px;

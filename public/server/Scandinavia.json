@@ -14,27 +14,35 @@
         {
             "id": "Ymir",
             "name": "Имир",
-            "img": "Ymir.webp",
             "otherName": "Ymir, Aurgelmir",
-            "children": "Первые великаны и /wiki-of-myths/mythology/Scandinavia/Thrudgelmir {Трудгельмир}",
+            "children": [
+                "Первые великаны",
+                {
+                    "id": "Thrudgelmir",
+                    "name": "Трудгельмир"
+                }
+            ],
             "type": "Первый великан",
             "history": "Первое живое существо после появление Нифльхейма и Муспельхейма. Появился из влаги от замерзшего яда и пламени. Питался молоком из вымени /wiki-of-myths/mythology/Scandinavia/Audumla {Аудумлы}. \nУснул. Под его руками появились первые великаны, а из ног /wiki-of-myths/mythology/Scandinavia/Thrudgelmir {Трудгельмир}. \nУмер от рук Одина и его братьев. Что из тела его создали мир."
         },
         {
             "id": "Audumla",
             "name": "Аудумла",
-            "img": "Audumla.webp",
             "otherName": "Auðumbla",
-            "type": "Корова",
+            "managed": "Корова",
             "history": "Корова, что появилась из инея одновременно с /wiki-of-myths/mythology/Scandinavia/Ymir {Имиром}. Кормила его и его детей. \nИз вымени ее потекли четыре молочные реки. А камень, что она лизала ожил и стал Бури, прародителем богов."
         },
         {
             "id": "Thrudgelmir",
             "name": "Трудгельмир",
-            "img": "Thrudgelmir.webp",
             "otherName": "Þrúðgelmir",
-            "parents": "/wiki-of-myths/mythology/Scandinavia/Ymir {Имир}",
-            "children": "Бергельмир",
+            "parents": [
+                {
+                    "id": "Ymir",
+                    "name": "Имир"
+                }
+            ],
+            "children": ["Бергельмир"],
             "type": "Великан",
             "history": "Появился из ног Имира. Отец Бергельмира. Упоминается в легенде о появлении мира, более нигде. Возможно утонул с другими великанами в крови Имира. Имел шесть голов."
         }

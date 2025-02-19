@@ -1,0 +1,14 @@
+a.item, .item a  {
+  text-decoration: underline;
+}
+
+.list {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  font: 400 1rem/1.3 var(--font-text);
+  text-align: end;
+}

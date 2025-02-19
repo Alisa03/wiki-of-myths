@@ -13,7 +13,7 @@ export const Button = styled.button`
 
     font: 400 1.5rem/1.2 ${baseTheme.fonts.text};
 
-    transition: all ease .7s;
+    transition: var(--hover);
 
     :hover {
         background-color: color-mix(in srgb, ${baseTheme.color.elementColor} 70%, transparent);

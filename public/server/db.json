@@ -1,5 +1,12 @@
 {
     "mythology": [
-        "Greece", "Scandinavia"
-    ] 
+        {
+            "id": "Greece",
+            "name": "Греческая"
+        },
+        {
+            "id": "Scandinavia",
+            "name": "Скандинавская"
+        }
+    ]
 }
