@@ -22,7 +22,7 @@ export const List = ({ data, text, mythology }: IProps) => {
                 data.length === 1
                     ? typeof data[0] === "string"
                         ? <p className={clsx(s.item, s.list)}>{data[0]}</p>
-                        : <Link className={clsx(s.item, s.list)} to={data[0].id}>
+                        : <Link className={clsx(s.item, s.list)} to={MYTHOLOGY_ROUTE + mythology + '/' + data[0].id}>
                             {data[0].name}
                         </Link>
                     : data.length > 0
